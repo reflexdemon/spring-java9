@@ -28,3 +28,4 @@ nbdist/
 gradle
 gradlew
 out
+.vagrant/
