@@ -10,4 +10,4 @@
 
 ## Testing
 
-Navigate to https://localhost:2020/hello to seee the output
+Navigate to http://localhost:2020/hello to seee the output
