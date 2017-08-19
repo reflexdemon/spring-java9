@@ -16,4 +16,4 @@ matrix:
         - export PATH=$JAVA_HOME/bin:$PATH
         - cd /home/travis/build/reflexdemon/spring-java9
         - java -version
-script: gradle check
+script: ./gradlew check
