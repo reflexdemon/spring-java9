@@ -16,7 +16,8 @@ matrix:
         - export PATH=$JAVA_HOME/bin:$PATH
         - sudo wget https://services.gradle.org/distributions/gradle-4.0.1-bin.zip
         - sudo unzip -d /opt/gradle gradle-4.0.1-bin.zip
-        - export PATH=$PATH:/opt/gradle/gradle-4.0.1/bin
+        - export GRADLE_HOME=/opt/gradle/gradle-4.0.1
+        - export PATH=/opt/gradle/gradle-4.0.1/bin:$PATH
         - export GRADLE_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED"
         - cd $pwd
         - java -version
