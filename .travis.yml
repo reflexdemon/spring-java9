@@ -8,7 +8,7 @@ matrix:
       before_install:
         - sudo apt-get install -y wget tar
         - sudo mkdir /opt/java && cd /opt/java
-        - sudo wget –quiet  http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x64_bin.tar.gz
+        - sudo wget http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x64_bin.tar.gz
         - sudo tar -xf jdk-9+178_linux-x64_bin.tar.gz
         - sudo ln -sf /opt/java/jdk-9 /opt/java/current
         - export JAVA_HOME=/opt/java/current
