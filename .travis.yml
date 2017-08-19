@@ -1,10 +1,10 @@
 language: java
 sudo: required
-dist: precise
+dist: trusty
 
 matrix:
   include:
-    - jdk: oraclejdk9 # JDK 9-ea+174 provided by Travis will be replaced by 9+177 in "before_install"
+#    - jdk: oraclejdk9 # JDK 9-ea+174 provided by Travis will be replaced by 9+177 in "before_install"
       before_install:
         - mkdir /opt/java && cd /opt/java
         - wget –quiet  -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x64_bin.tar.gz
