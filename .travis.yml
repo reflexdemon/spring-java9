@@ -14,6 +14,6 @@ matrix:
         - sudo ln -sf /opt/java/jdk-9 /opt/java/current
         - export JAVA_HOME=/opt/java/current
         - export PATH=$JAVA_HOME/bin:$PATH
-        - cd ~/reflexdemon/spring-java9
+        - cd /home/travis/build/reflexdemon/spring-java9
         - java -version
 script: gradle check
