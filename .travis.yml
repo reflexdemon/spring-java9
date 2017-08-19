@@ -6,9 +6,9 @@ matrix:
   include:
     - jdk: oraclejdk9 # JDK 9-ea+174 provided by Travis will be replaced by 9+177 in "before_install"
       before_install:
-        - cd ~
-        - wget http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x86_bin.tar.gz
-        - tar -xzf jdk-9+178_linux-x64_bin.tar.gz
-        - export JAVA_HOME=~/jdk-9
-        - PATH=$JAVA_HOME/bin:$PATH
-        - cd -
+        - sudo apt-get update -qq
+        - sudo apt-get install oracle-9-installer
+        - remove_dir_from_path $JAVA_HOME/bin
+        - export JAVA_HOME=/usr/lib/jvm/java-9-oracle
+        - export PATH=$JAVA_HOME/bin:$PATH
+        - java -version
