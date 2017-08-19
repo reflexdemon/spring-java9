@@ -6,6 +6,7 @@ matrix:
   include:
 #    - jdk: oraclejdk9 # JDK 9-ea+174 provided by Travis will be replaced by 9+177 in "before_install"
       before_install:
+        - pwd
         - sudo apt-get install -y wget tar
         - sudo mkdir /opt/java && cd /opt/java
         - sudo wget http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x64_bin.tar.gz
