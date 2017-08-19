@@ -6,14 +6,18 @@ matrix:
   include:
 #    - jdk: oraclejdk9 # JDK 9-ea+174 provided by Travis will be replaced by 9+177 in "before_install"
       before_install:
-        - pwd
-        - sudo apt-get install -y wget tar
+        - pwd=$(pwd)
+        - sudo apt-get install -y wget tar unzip
         - sudo mkdir /opt/java && cd /opt/java
         - sudo wget http://download.java.net/java/jdk9/archive/178/binaries/jdk-9+178_linux-x64_bin.tar.gz
         - sudo tar -xf jdk-9+178_linux-x64_bin.tar.gz
         - sudo ln -sf /opt/java/jdk-9 /opt/java/current
         - export JAVA_HOME=/opt/java/current
         - export PATH=$JAVA_HOME/bin:$PATH
-        - cd /home/travis/build/reflexdemon/spring-java9
+        - sudo wget https://services.gradle.org/distributions/gradle-4.0.1-bin.zip
+        - sudo unzip -d /opt/gradle gradle-4.0.1-bin.zip
+        - export PATH=$PATH:/opt/gradle/gradle-4.0.1/bin
+        - export GRADLE_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED"
+        - cd $pwd
         - java -version
 script: ./gradlew check
