@@ -21,4 +21,3 @@ matrix:
         - export GRADLE_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED"
         - cd $pwd
         - java -version
-script: ./gradlew check
