@@ -14,3 +14,4 @@ matrix:
         - export JAVA_HOME=/opt/java/current
         - export PATH=$JAVA_HOME/bin:$PATH
         - java -version
+script: gradle check
