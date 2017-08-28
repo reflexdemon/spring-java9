@@ -14,6 +14,12 @@
 
 Navigate to http://localhost:2020/hello to seee the output
 
+## Testing REPL endpoint
+
+```bash
+❯ curl --silent -H "Content-Type: application/json; charset=UTF-8" -X POST -d '{"command":"44+55"}' http://localhost:8080/repl                               
+[{"status":"VALID","value":"99","exception":null,"snippet":"Snippet:VariableKey($2)#3-44+55"}]
+```
 
 [travis-image]: https://travis-ci.org/reflexdemon/spring-java9.svg?branch=master
 [travis-url]: https://travis-ci.org/reflexdemon/spring-java9
