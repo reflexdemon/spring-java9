@@ -14,10 +14,10 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   
   # Ubuntu 16.X
-  # config.vm.box = "envimation/ubuntu-xenial"
+  config.vm.box = "ubuntu/xenial64"
   
   # Ubuntu 17.X
-  config.vm.box = "wholebits/ubuntu17.04-64"
+  # config.vm.box = "wholebits/ubuntu17.04-64"
 
   
 
