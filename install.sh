@@ -19,19 +19,21 @@ MONGO_VERSION=3.2.1
 
 #Install JAVA
 
-# See https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead
-echo 'Installing JAVA 1.9'
-mkdir /opt/java && cd /opt/java
-# curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.tar.gz > jdk-8u25-linux-x64.tar.gz
-#wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/jdk-8u131-linux-x64.tar.gz
-wget  -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
+# # See https://stackoverflow.com/questions/10268583/downloading-java-jdk-on-linux-via-wget-is-shown-license-page-instead
+# echo 'Installing JAVA 1.9'
+# mkdir /opt/java && cd /opt/java
+# # curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.tar.gz > jdk-8u25-linux-x64.tar.gz
+# #wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u131-b11/jdk-8u131-linux-x64.tar.gz
+# wget  -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
 
-tar -xf jdk-9.0.4_linux-x64_bin.tar.gz
-ln -sf /opt/java/jdk-9 /opt/java/current
-sudo su vagrant
-echo 'export JAVA_HOME=/opt/java/current' >> /home/vagrant/.bashrc
-echo 'export PATH=$JAVA_HOME/bin:$PATH' >> /home/vagrant/.bashrc
-sudo su root
+# tar -xf jdk-9.0.4_linux-x64_bin.tar.gz
+# ln -sf /opt/java/jdk-9 /opt/java/current
+# sudo su vagrant
+# echo 'export JAVA_HOME=/opt/java/current' >> /home/vagrant/.bashrc
+# echo 'export PATH=$JAVA_HOME/bin:$PATH' >> /home/vagrant/.bashrc
+# sudo su root
+
+apt-get install -y openjdk-9-jdk
 
 #Install Mongo
 mkdir /opt/mongo  
